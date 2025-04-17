@@ -1,0 +1,23 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: npchcrlkq-go 
+  description: Secure Supply Chain Example for Go Runtime http based application with advanced continuous integration pipeline covering building, CVE scanning, security scanning, signatures,  attestations, SLSA provenance and SBOM along with Gitops-based continuous deployment   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:
+    # ArgoCD apps from this template used rhtap-gitops as the grouping
+    argocd/app-selector: rhtap/gitops=npchcrlkq-go
+    backstage.io/kubernetes-id: npchcrlkq-go 
+    backstage.io/techdocs-ref: dir:. 
+    github.com/project-slug: xjiangorg/npchcrlkq-go
+    nexus-repository-manager/docker.image-name: rhtap/rhtap-qe-go
+  tags: ["go", "sscs", "sbom", "acs"] 
+spec:
+  type: service
+  owner: user:guest 
+  lifecycle: experimental
+ 
